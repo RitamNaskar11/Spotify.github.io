@@ -35,7 +35,7 @@ async function getSongs(folder) {
 
     let songUL = document.querySelector(".songList ul"); // ✅ fixed selector
     songUL.innerHTML = "";
-    
+
     for (const song of songs) {
         songUL.innerHTML += `
             <li>
@@ -90,16 +90,16 @@ async function displayAlbums() {
         if (e.href.includes("/songs/")) {
             // ✅ get folder name correctly
             let folder = e.href.split("/").slice(-1)[0];
-                let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
-                let response = await a.json();
+            let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+            let response = await a.json();
 
-                 cardContainer.innerHTML= cardContainer.innerHTML + `<div data-folder="${folder}" class="card">
+            cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card">
                         <img src="songs/${folder}/cover.jpg" alt="Song cover" class="cover">
                         <button class="play-btn"></button>
                         <h2 class="play">${response.title}</h2>
                         <p>${response.description}</p>
                     </div>`;
-            
+
         }
 
         // Load the playlist when click the card 
@@ -172,7 +172,7 @@ async function main() {
     })
 
 
-    document.querySelector(".vol>img"). addEventListener("click", e => {
+    document.querySelector(".vol>img").addEventListener("click", e => {
         // console.log(e.target)
         // console.log("changing", e.target.src)
         if (e.target.src.includes("volume.svg")) {
