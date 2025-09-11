@@ -1,0 +1,55 @@
+
+.border{
+  /* border: 2px solid blue; */
+  margin: 3px;
+}
+.flex{
+    display: flex;
+}
+.justify{
+    justify-content: center;
+}
+.item{
+    align-items: center;
+}
+
+.bg-black{
+      width: 100vw;
+    background-color:black;
+    padding: 1px;
+
+}
+.invert{
+    filter: invert(1);
+    height: 25px;
+}
+.bg-grey{
+    background-color:rgb(32, 32, 32);
+}
+
+.rounded{
+    border-radius: 6px;
+}
+.ma-1{
+    margin: 5px;
+}
+
+.p-1{
+    padding: 0px
+}
+
+.playList {
+    scrollbar-width: thin;                
+    scrollbar-color: #a3a3a3 transparent;    
+}
+
+.songList{
+     scrollbar-width: thin;                
+    scrollbar-color: #a3a3a3 transparent; 
+    
+}
+
+
+
+
+
